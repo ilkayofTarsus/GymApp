@@ -1,10 +1,10 @@
 package com.ahmetozdemir.gymapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.ahmetozdemir.gymapp.databinding.ActivityDetailsBinding;
 
@@ -29,5 +29,11 @@ public class DetailsActivity extends AppCompatActivity
         binding.countryText.setText(selectedSupplement.supplementInfo);
         binding.imageView4.setImageResource(selectedSupplement.supplementImage);
         //getSupportActionBar().setTitle("SUPPLEMENT CATALOG"); //Burası action barda yazılacak yazıyı ayarlar
+    }
+
+    public void goProfile(View view)
+    {
+        Intent intent = new Intent(DetailsActivity.this, ProfilePage.class);
+        startActivity(intent);
     }
 }
