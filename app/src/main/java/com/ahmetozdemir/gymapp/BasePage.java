@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ahmetozdemir.gymapp.databinding.BasePageBinding;
-
+// ahmetovic tarsuslu
 public class BasePage extends AppCompatActivity
 {
     private BasePageBinding binding;
