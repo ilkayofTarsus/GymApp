@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    tools:context=".DetailsActivity">
+    android:background="#000000">
 
     <!-- AppBar layout for using Toolbar as AppBar -->
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="0dp"
@@ -62,7 +62,7 @@
                 android:id="@+id/textView"
                 android:layout_width="237dp"
                 android:layout_height="30dp"
-                android:text="SUPPLEMENT CATALOG"
+                android:text="EDIT PROFILE"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
@@ -76,50 +76,79 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
-        android:id="@+id/nameText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="Name"
-        android:textAlignment="center"
-        android:textColor="#E86767"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="188dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/rounded_imageview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameText"
-        app:srcCompat="@drawable/ic_launcher_background" />
-
-    <TextView
-        android:id="@+id/countryText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="50dp"
-        android:text="Details"
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginBottom="431dp"
+        android:background="@drawable/main_page_cylinder_black_with_frame"
+        android:ems="10"
+        android:hint="Enter new height"
+        android:inputType="text"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textColorHint="#808080"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="349dp"
+        android:background="@drawable/main_page_cylinder_black_with_frame"
+        android:ems="10"
+        android:hint="Enter new age"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/nameAndSurname"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="514dp"
+        android:background="@drawable/main_page_cylinder_black_with_frame"
+        android:ems="10"
+        android:hint="Enter new name and surname"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#808080"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="131dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="327dp"
+        android:layout_marginBottom="270dp"
+        android:backgroundTint="#D05047"
+        android:onClick="saveChanges"
+        android:text="SAVE"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

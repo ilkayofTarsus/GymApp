@@ -42,6 +42,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivityGYMAPP"
             android:exported="true">
             <intent-filter>
@@ -54,5 +58,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
 
 </manifest>

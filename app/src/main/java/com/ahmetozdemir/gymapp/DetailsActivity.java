@@ -36,4 +36,10 @@ public class DetailsActivity extends AppCompatActivity
         Intent intent = new Intent(DetailsActivity.this, ProfilePage.class);
         startActivity(intent);
     }
+
+    public void goHome(View view)
+    {
+        Intent intent = new Intent(DetailsActivity.this, BasePage.class);
+        startActivity(intent);
+    }
 }
