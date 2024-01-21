@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".SupplementActivity">
+    tools:context=".Exercise">
 
     <!-- AppBar layout for using Toolbar as AppBar -->
     <com.google.android.material.appbar.AppBarLayout
@@ -63,7 +63,7 @@
                 android:id="@+id/textView"
                 android:layout_width="237dp"
                 android:layout_height="30dp"
-                android:text="SUPPLEMENT CATALOG"
+                android:text="EXERCISES"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"

@@ -9,6 +9,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ahmetozdemir.gymapp.databinding.RecyclerRowBinding;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 
 import java.util.ArrayList;
 
@@ -35,18 +38,12 @@ public class SupplementAdapter extends RecyclerView.Adapter< SupplementAdapter.S
     {
         holder.binding.recyclerViewTextView.setText(supplementArrayList.get(position).supplementName);
 
-        int photoId = supplementArrayList.get(position).supplementImage;
-
-        if (photoId != 0)
-        {
-            holder.binding.imageView1.setImageResource(photoId);
-        }
-
-        else
-        {
-            // Eğer photoId yoksa, varsayılan görüntüyü kullan.
-            holder.binding.imageView1.setImageResource(R.drawable.ic_launcher_foreground);
-        }
+        Glide.with(holder.itemView.getContext())
+                .load(supplementArrayList.get(position).supplementImage)
+                .placeholder(R.drawable.user_icon) // Opsiyonel: Yükleme sırasında gösterilecek resim
+                .error(R.drawable.user_icon) // Opsiyonel: Yükleme hatası durumunda gösterilecek resim
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.binding.imageView1);
 
         holder.itemView.setOnClickListener(new View.OnClickListener()
         {
